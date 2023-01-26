@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import Head from 'next/head';
+import { BuyCoin } from '../components/BuyCoin';
 export default function Home() {
   return (
     <>
@@ -12,15 +13,8 @@ export default function Home() {
         />
       </Head>
       <div className={styles.container}>
-          
           <main className={styles.main}>
-            <div>
-              <div className={styles.title}>
-                <span className={`${styles.titleWord} ${styles.word2}`}>
-                  Develop staking interface
-                </span>
-              </div>
-            </div>
+            <BuyCoin/>
           </main>
       </div>
     </>
