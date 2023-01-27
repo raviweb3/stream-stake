@@ -1,4 +1,4 @@
-.buy_container {
+.mint_container {
     margin-top: 25px;
     font-size: larger;
     font-weight: 600;
@@ -9,7 +9,7 @@
     border-top: 1px solid grey;
 }
 
-.buy_amount {
+.mint_amount {
     border: 1px solid grey;
 }
 
@@ -17,7 +17,7 @@
     margin-top: 15px;
 }
 
-.buy_button {
+.mint_button {
   background-color: #080808; 
   border: 1px solid var(--text-color);
   border-radius: 20px;

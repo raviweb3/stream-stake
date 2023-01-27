@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
-import styles from "../styles/BuyCoin.module.css";
+import styles from "../styles/MintCoin.module.css";
 import Image from "next/image";
 
 
-export const BuyCoin = () => {
+export const MintCoin = () => {
   const [amount, setAmount] = useState(0);
 
   const handleAmountChange = (e) => {
@@ -16,7 +16,7 @@ export const BuyCoin = () => {
 
   const contribute = async () => {
     if (amount <= 0) {
-      return toast.error("You can't buy zero!");
+      return toast.error("You can't Mint zero!");
     }
 
     // to do, interact with the smart contract here
@@ -26,12 +26,12 @@ export const BuyCoin = () => {
 
 
   return (
-    <div className={styles.buy_container}>
+    <div className={styles.mint_container}>
       <h3>Buy Stream Coin</h3>
       <div className={styles.action_container}>
         <input
-          className={styles.buy-amount}
-          placeholder="Amount to Buy..."
+          className={styles.mint-amount}
+          placeholder="Amount to Mint..."
           type="text"
           value={amount}
           onChange={handleAmountChange}
@@ -41,9 +41,9 @@ export const BuyCoin = () => {
       {amount && (
         <>
           <div className={styles.estimate_container}>
-            Will get you: {amount * 3} <strong>SFIL</strong>
+            Will get you: {amount * 1} <strong>StrFIL</strong>
           </div>
-          <button className={styles.buy_button} onClick={contribute}>
+          <button className={styles.mint_button} onClick={contribute}>
             Buy
           </button>
         </>
